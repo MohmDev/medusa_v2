@@ -1,0 +1,15 @@
+{
+  "name": "medusa-v2-made-easy",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "medusa_v2-backend",
+    "medusa_v2-storefront"
+  ],
+  "scripts": {
+    "install": "npm run yarn install",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {}
+}
