@@ -75,25 +75,25 @@ const modules = {
   [Modules.STORE]: true,
   [Modules.TAX]: true,
   [Modules.CURRENCY]: true,
-  [Modules.PAYMENT]: true,
+  // [Modules.PAYMENT]: true,
   [Modules.ORDER]: true,
-  [Modules.FULFILLMENT]: {
-    resolve: '@medusajs/fulfillment',
-    options: {
-      providers: [
-        {
-          resolve: '@medusajs/fulfillment-manual',
-          id: 'manual',
-        },
-      ],
-    },
-  },
+  // [Modules.FULFILLMENT]: {
+  //   resolve: '@medusajs/fulfillment',
+  //   options: {
+  //     providers: [
+  //       {
+  //         resolve: '@medusajs/fulfillment-manual',
+  //         id: 'manual',
+  //       },
+  //     ],
+  //   },
+  // },
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
 const projectConfig = {
   databaseUrl: DATABASE_URL,
-  // redisUrl: REDIS_URL,
+  redisUrl: REDIS_URL,
   http: {
     storeCors: STORE_CORS,
     adminCors: ADMIN_CORS,
@@ -107,7 +107,7 @@ const projectConfig = {
 module.exports = {
   projectConfig,
   admin: {
-    disable: true,
+    disable: false,
   },
   plugins,
   modules,

@@ -7,7 +7,7 @@
     "medusa_v2-storefront"
   ],
   "scripts": {
-    "install": "npm run yarn install",
+    "install": "npm install",
     "build": "npm run build --workspaces",
     "test": "npm run test --workspaces"
   },
